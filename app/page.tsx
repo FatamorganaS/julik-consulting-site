@@ -44,18 +44,15 @@ const services = [
   },
 ];
 
-const testingAreas = [
-  'Functional',
-  'Regression',
-  'Smoke',
-  'Exploratory',
-  'Integration',
-  'API',
-  'UAT',
-  'System',
-  'Cross-browser',
-  'Cross-platform',
-];
+function TestTypes({ items }: { items: string[] }) {
+  return (
+    <ul className="test-types" aria-label="Types of testing">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Home() {
   return (
@@ -202,94 +199,164 @@ export default function Home() {
           <div className="section-heading">
             <p className="eyebrow">Selected experience</p>
             <h2 id="experience-title">
-              Products I’ve helped make more reliable.
+              Companies, products and testing scope.
             </h2>
             <p>
-              My experience spans digital banking, logistics, enterprise
-              software and independent iOS products — across web, mobile,
-              desktop and APIs. These are selected examples from a much wider
-              portfolio of products I have tested.
+              A structured view of where I worked, which products I tested and
+              how I approached quality. These are selected examples from a much
+              wider portfolio.
             </p>
           </div>
 
-          <div className="testing-areas" aria-label="Testing experience">
-            {testingAreas.map((area) => (
-              <span key={area}>{area}</span>
-            ))}
+          <div className="experience-group">
+            <p className="group-label">Independent project</p>
+            <article className="independent-project">
+              <div className="project-heading">
+                <div>
+                  <h3>WhisperBoard</h3>
+                  <p>On-device voice transcription for iOS</p>
+                </div>
+                <span>iPhone · iPad</span>
+              </div>
+              <p className="project-description">
+                I tested an app that uses on-device Whisper models to turn voice
+                recordings and audio into text. The work covered the complete
+                user journey: recording, transcription, model selection, file
+                handling, settings and everyday usability.
+              </p>
+              <TestTypes
+                items={[
+                  'Functional',
+                  'Exploratory',
+                  'Regression',
+                  'Usability',
+                  'Mobile',
+                ]}
+              />
+              <a
+                className="project-link"
+                href="https://apps.apple.com/us/app/whisperboard-voice-to-text/id1661442906"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View WhisperBoard on the App Store ↗
+              </a>
+            </article>
           </div>
 
-          <div className="experience-list">
-            <details>
-              <summary>
-                <span>
-                  <strong>WhisperBoard</strong>
-                  <small>On-device voice transcription</small>
-                </span>
-                <span className="experience-meta">
-                  iOS · Independent product
-                </span>
-              </summary>
-              <div className="experience-body">
-                <p>
-                  I tested WhisperBoard, an iPhone and iPad app that uses
-                  on-device Whisper models to turn voice recordings and audio
-                  into text. The work covered the complete user journey:
-                  recording, transcription, model selection, file handling,
-                  settings and everyday usability.
-                </p>
-                <a
-                  href="https://apps.apple.com/us/app/whisperboard-voice-to-text/id1661442906"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View WhisperBoard on the App Store ↗
-                </a>
-              </div>
-            </details>
+          <div className="experience-group company-experience">
+            <p className="group-label">Professional experience</p>
 
-            <details>
+            <details className="company" open>
               <summary>
-                <span>
+                <span className="company-name">
+                  <small>Company</small>
                   <strong>Access Softek</strong>
-                  <small>Digital banking products</small>
                 </span>
-                <span className="experience-meta">Web · Mobile · API</span>
+                <span className="company-role">9 years · QA Lead</span>
               </summary>
-              <div className="experience-body">
-                <p>
-                  As a QA Lead, I worked across customer-facing and internal
-                  banking products, established practical QA processes and built
-                  test coverage for complex user and business workflows. This
-                  work helped shorten the release cycle from six weeks to three.
+              <div className="company-body">
+                <p className="company-description">
+                  For nine years, I worked on digital banking products and grew
+                  from hands-on testing into QA leadership. I built test
+                  coverage for complex customer and internal workflows and
+                  helped shorten the release cycle from six weeks to three.
                 </p>
-                <ul className="product-list" aria-label="Products tested">
-                  <li>Online Account Opening (OAO)</li>
-                  <li>Lending</li>
-                  <li>Admin Tool</li>
-                  <li>Solutions</li>
-                  <li>Delivered</li>
-                </ul>
+                <div className="company-products">
+                  <article className="product">
+                    <p className="product-label">Product 01</p>
+                    <h4>Online Account Opening (OAO)</h4>
+                    <p>
+                      A digital account-opening journey with multi-step forms,
+                      identity flows, validations and integrations.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Accessibility',
+                        'Initial',
+                        'Functional',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                      ]}
+                    />
+                  </article>
+                  <article className="product">
+                    <p className="product-label">Product 02</p>
+                    <h4>Lending</h4>
+                    <p>
+                      Digital lending workflows covering applications, business
+                      rules, decisions and customer-facing states.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Accessibility',
+                        'Initial',
+                        'Functional',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                      ]}
+                    />
+                  </article>
+                  <article className="product">
+                    <p className="product-label">Product 03</p>
+                    <h4>Orpheus</h4>
+                    <p>
+                      A banking product tested across core workflows, changing
+                      requirements and repeated release cycles.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Initial',
+                        'Functional',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                      ]}
+                    />
+                  </article>
+                </div>
               </div>
             </details>
 
-            <details>
+            <details className="company">
               <summary>
-                <span>
+                <span className="company-name">
+                  <small>Company</small>
                   <strong>PLS Logistics Services</strong>
-                  <small>Logistics management platform</small>
                 </span>
-                <span className="experience-meta">
-                  Web · End-to-end workflows
-                </span>
+                <span className="company-role">QA Engineer</span>
               </summary>
-              <div className="experience-body">
-                <p>
-                  I tested core workflows for a technology-enabled logistics
-                  platform. My work included test design, functional, smoke,
-                  exploratory, UAT and system testing, clear bug reporting and
-                  close collaboration with the product and development teams.
+              <div className="company-body">
+                <p className="company-description">
+                  I tested technology-enabled logistics software and worked
+                  closely with product and development teams on
+                  business-critical workflows.
                 </p>
+                <div className="company-products">
+                  <article className="product">
+                    <p className="product-label">Product</p>
+                    <h4>Logistics management platform</h4>
+                    <p>
+                      End-to-end logistics workflows, business rules, data
+                      handling and release readiness for day-to-day operations.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Functional',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                        'System',
+                        'UAT',
+                        'End-to-end',
+                      ]}
+                    />
+                  </article>
+                </div>
                 <a
+                  className="project-link"
                   href="https://www.plslogistics.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -299,59 +366,59 @@ export default function Home() {
               </div>
             </details>
 
-            <details>
+            <details className="company">
               <summary>
-                <span>
-                  <strong>Pearson</strong>
-                  <small>Digital product testing</small>
-                </span>
-                <span className="experience-meta">Functional · Regression</span>
-              </summary>
-              <div className="experience-body">
-                <p>
-                  I tested Pearson product workflows across releases,
-                  translating requirements into structured test scenarios,
-                  validating key user journeys and documenting defects clearly
-                  for the development team.
-                </p>
-              </div>
-            </details>
-
-            <details>
-              <summary>
-                <span>
-                  <strong>Titan</strong>
-                  <small>Product and release validation</small>
-                </span>
-                <span className="experience-meta">Functional · System</span>
-              </summary>
-              <div className="experience-body">
-                <p>
-                  I tested Titan as part of a broader client portfolio, covering
-                  core functionality, end-to-end user flows and release
-                  readiness. The work combined careful requirement analysis with
-                  exploratory and regression testing.
-                </p>
-              </div>
-            </details>
-
-            <details>
-              <summary>
-                <span>
+                <span className="company-name">
+                  <small>Company</small>
                   <strong>Elephant Head Software</strong>
-                  <small>Multiple enterprise client products</small>
                 </span>
-                <span className="experience-meta">Web · Mobile · Desktop</span>
+                <span className="company-role">QA Engineer · Team Lead</span>
               </summary>
-              <div className="experience-body">
-                <p>
-                  At Elephant Head Software, I worked across a broad portfolio
-                  of client products, including Verizon and many others. I
-                  combined hands-on cross-platform testing with team leadership,
-                  built QA practices from the ground up and led a team of five.
-                  This selected list represents only part of the products I have
-                  tested throughout my career.
+              <div className="company-body">
+                <p className="company-description">
+                  I worked across client products, combining hands-on testing
+                  with team leadership. I built QA practices from the ground up,
+                  led a team of five and turned requirements into clear test
+                  coverage and actionable bug reports.
                 </p>
+                <div className="company-products two-column-products">
+                  <article className="product">
+                    <p className="product-label">Product 01</p>
+                    <h4>Pearson</h4>
+                    <p>
+                      Digital product workflows tested across browsers, releases
+                      and changing functional requirements.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Functional',
+                        'Performance',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                        'Cross-browser',
+                      ]}
+                    />
+                  </article>
+                  <article className="product">
+                    <p className="product-label">Product 02</p>
+                    <h4>Titan</h4>
+                    <p>
+                      Core product functionality, end-to-end user flows and
+                      release validation across supported environments.
+                    </p>
+                    <TestTypes
+                      items={[
+                        'Functional',
+                        'Performance',
+                        'Smoke',
+                        'Regression',
+                        'Exploratory',
+                        'Compatibility',
+                      ]}
+                    />
+                  </article>
+                </div>
               </div>
             </details>
           </div>
