@@ -3,11 +3,11 @@
 import { FormEvent, useState } from 'react';
 
 const sessions = [
-  'QA Career Session — 60 min · €69',
-  'QA Mock Interview — 60 min · €89',
-  'Pair Testing Session — 60 min · €89',
-  'IT English Session — 50 min · €49',
-  'English Walk & Talk — 60 min · €55',
+  'QA Clarity Session — 60 min · €49',
+  'QA Mock Interview — 60 min · €59',
+  'Pair Testing Session — 60 min · €69',
+  'IT English Session — 50 min · €39',
+  'English Walk & Talk — 60 min · €45',
   'Free discovery call — 15 min',
 ];
 
@@ -99,7 +99,7 @@ export function BookingForm() {
       <div className="field">
         <label htmlFor="link">Relevant link</label>
         <p className="field-help" id="link-help">
-          CV, LinkedIn, portfolio, job description or project URL. Please do not
+          LinkedIn, portfolio, job description or project URL. Please do not
           share passwords or sensitive information.
         </p>
         <input

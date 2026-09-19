@@ -3,17 +3,17 @@ import { ThemeToggle } from './theme-toggle';
 
 const services = [
   {
-    title: 'QA Career Session',
+    title: 'QA Clarity Session',
     duration: '60 min',
-    price: '€69',
+    price: '€49',
     description:
-      'For junior QA engineers, career switchers and testers who feel stuck. We can review your experience, CV, learning plan or next professional step.',
+      'For junior QA engineers, career switchers and testers who feel stuck. We can discuss your current level, learning priorities and next professional step.',
     result: 'Leave with clear priorities and a realistic action plan.',
   },
   {
     title: 'QA Mock Interview',
     duration: '60 min',
-    price: '€89',
+    price: '€59',
     description:
       'A realistic QA interview: 40 minutes of questions followed by 20 minutes of direct, practical feedback.',
     result: 'Receive a focused list of strengths, gaps and preparation topics.',
@@ -21,7 +21,7 @@ const services = [
   {
     title: 'Pair Testing Session',
     duration: '60 min',
-    price: '€89',
+    price: '€69',
     description:
       'Bring your website, app or portfolio project. We will explore it together, identify risks and practise structured testing.',
     result: 'Receive a short written summary of findings and recommendations.',
@@ -29,7 +29,7 @@ const services = [
   {
     title: 'IT English Session',
     duration: '50 min',
-    price: '€49',
+    price: '€39',
     description:
       'Practise meetings, interviews, QA vocabulary and explaining technical ideas clearly in an international team.',
     result: 'Build confidence with language you can use immediately at work.',
@@ -37,7 +37,7 @@ const services = [
   {
     title: 'English Walk & Talk',
     duration: '60 min',
-    price: '€55',
+    price: '€45',
     description:
       'Relaxed one-to-one English conversation while walking through Amsterdam. No classroom pressure and no grammar drills.',
     result: 'Speak more naturally and receive gentle, useful corrections.',
@@ -70,9 +70,9 @@ export default function Home() {
             Speak with confidence.
           </h1>
           <p className="hero-copy">
-            I’m Yuliia — a Ukrainian QA Lead, mentor and English practice
-            partner based in Amsterdam. I help junior QA engineers and people in
-            tech turn uncertainty into a practical next step.
+            I’m Yuliia — a QA Lead, mentor and English practice partner based in
+            Amsterdam. I help junior QA engineers and people in tech turn
+            uncertainty into a practical next step.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#booking">
@@ -100,6 +100,10 @@ export default function Home() {
               You bring the context; I bring focused attention and honest
               feedback.
             </p>
+            <p className="introductory-note">
+              These are introductory prices while I develop and refine each
+              format through early sessions.
+            </p>
           </div>
 
           <div className="service-list">
@@ -120,31 +124,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="section split-section"
-          aria-labelledby="useful-title"
-        >
-          <div>
-            <p className="eyebrow">A good fit</p>
-            <h2 id="useful-title">What I’m useful for</h2>
-            <ul className="plain-list">
-              <li>Starting or developing a QA career.</li>
-              <li>Preparing for a QA interview.</li>
-              <li>Reviewing a CV or learning roadmap.</li>
-              <li>Testing a real project together.</li>
-              <li>Improving test cases and bug reports.</li>
-              <li>Communicating more confidently in English.</li>
-            </ul>
-          </div>
-          <div className="boundary-block">
-            <h3>What I’m not useful for</h3>
-            <ul className="plain-list small-list">
-              <li>Guaranteeing a job offer.</li>
-              <li>Completing interview tasks for you.</li>
-              <li>Full security or penetration testing.</li>
-              <li>Official language certification.</li>
-            </ul>
-          </div>
+        <section className="section" aria-labelledby="useful-title">
+          <p className="eyebrow">A good fit</p>
+          <h2 id="useful-title">What I can help you with</h2>
+          <ul className="plain-list useful-list">
+            <li>Starting or developing a QA career.</li>
+            <li>Preparing for a QA interview.</li>
+            <li>Creating a focused QA learning roadmap.</li>
+            <li>Testing a real project together.</li>
+            <li>Improving test cases and bug reports.</li>
+            <li>Communicating more confidently in English.</li>
+          </ul>
         </section>
 
         <section className="section" id="about" aria-labelledby="about-title">
@@ -152,8 +142,15 @@ export default function Home() {
           <h2 id="about-title">Technology, communication and people.</h2>
           <div className="story">
             <p className="lead">
-              I’m Yuliia. A Ukrainian QA Lead, mentor and English practice
-              partner living in Amsterdam.
+              I’m Yuliia. Eight years ago, I moved from Odesa, Ukraine, to the
+              Netherlands. Amsterdam has been home ever since.
+            </p>
+            <p>
+              Starting again in a new country taught me how much confidence
+              depends on being able to understand people, express yourself and
+              find your place in an unfamiliar environment. I built a new life
+              here while continuing to grow in an international technology
+              career.
             </p>
             <p>
               I began with a degree in English and German Philology and later
@@ -187,9 +184,9 @@ export default function Home() {
           <p className="eyebrow">Supporting Ukrainians in tech</p>
           <h2 id="ukraine-title">You don’t have to rebuild alone.</h2>
           <p>
-            Moving countries gave me a personal understanding of how difficult
-            it can be to rebuild a professional life, communicate in another
-            language and find confidence in an unfamiliar job market.
+            Having moved from Odesa to the Netherlands myself, I understand how
+            much courage it takes to rebuild a professional life, communicate in
+            another language and find confidence in an unfamiliar environment.
           </p>
           <p>
             I especially want to support Ukrainians entering QA, continuing a
@@ -262,8 +259,8 @@ export default function Home() {
           <details>
             <summary>Do I need QA experience?</summary>
             <p>
-              No. Career sessions are suitable for complete beginners, career
-              switchers and junior QA engineers.
+              No. QA Clarity sessions are suitable for complete beginners,
+              career switchers and junior QA engineers.
             </p>
           </details>
           <details>
@@ -277,8 +274,8 @@ export default function Home() {
           <details>
             <summary>What should I prepare?</summary>
             <p>
-              Only your situation and desired outcome. You may share a CV, job
-              description or project link, but it is optional.
+              Only your situation and desired outcome. You may share a job
+              description, portfolio or project link, but it is optional.
             </p>
           </details>
           <details>
