@@ -207,7 +207,8 @@ export default function Home() {
             <p>
               My experience spans digital banking, logistics, enterprise
               software and independent iOS products — across web, mobile,
-              desktop and APIs.
+              desktop and APIs. These are selected examples from a much wider
+              portfolio of products I have tested.
             </p>
           </div>
 
@@ -301,18 +302,55 @@ export default function Home() {
             <details>
               <summary>
                 <span>
+                  <strong>Pearson</strong>
+                  <small>Digital product testing</small>
+                </span>
+                <span className="experience-meta">Functional · Regression</span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  I tested Pearson product workflows across releases,
+                  translating requirements into structured test scenarios,
+                  validating key user journeys and documenting defects clearly
+                  for the development team.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>
+                  <strong>Titan</strong>
+                  <small>Product and release validation</small>
+                </span>
+                <span className="experience-meta">Functional · System</span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  I tested Titan as part of a broader client portfolio, covering
+                  core functionality, end-to-end user flows and release
+                  readiness. The work combined careful requirement analysis with
+                  exploratory and regression testing.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>
                   <strong>Elephant Head Software</strong>
-                  <small>Enterprise client products</small>
+                  <small>Multiple enterprise client products</small>
                 </span>
                 <span className="experience-meta">Web · Mobile · Desktop</span>
               </summary>
               <div className="experience-body">
                 <p>
-                  I worked on client projects including products for Verizon and
-                  Pearson, combining hands-on cross-platform testing with team
-                  leadership. I built QA practices from the ground up, led a
-                  team of five and translated complex requirements into clear
-                  test coverage and bug reports.
+                  At Elephant Head Software, I worked across a broad portfolio
+                  of client products, including Verizon and many others. I
+                  combined hands-on cross-platform testing with team leadership,
+                  built QA practices from the ground up and led a team of five.
+                  This selected list represents only part of the products I have
+                  tested throughout my career.
                 </p>
               </div>
             </details>
