@@ -44,6 +44,19 @@ const services = [
   },
 ];
 
+const testingAreas = [
+  'Functional',
+  'Regression',
+  'Smoke',
+  'Exploratory',
+  'Integration',
+  'API',
+  'UAT',
+  'System',
+  'Cross-browser',
+  'Cross-platform',
+];
+
 export default function Home() {
   return (
     <div className="site-shell">
@@ -53,6 +66,7 @@ export default function Home() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#work">Work with me</a>
+          <a href="#experience">Experience</a>
           <a href="#about">About</a>
           <a className="nav-cta" href="#booking">
             Book a session
@@ -177,6 +191,131 @@ export default function Home() {
               project, your interview or the conversation you need to handle in
               English.
             </p>
+          </div>
+        </section>
+
+        <section
+          className="section experience"
+          id="experience"
+          aria-labelledby="experience-title"
+        >
+          <div className="section-heading">
+            <p className="eyebrow">Selected experience</p>
+            <h2 id="experience-title">
+              Products I’ve helped make more reliable.
+            </h2>
+            <p>
+              My experience spans digital banking, logistics, enterprise
+              software and independent iOS products — across web, mobile,
+              desktop and APIs.
+            </p>
+          </div>
+
+          <div className="testing-areas" aria-label="Testing experience">
+            {testingAreas.map((area) => (
+              <span key={area}>{area}</span>
+            ))}
+          </div>
+
+          <div className="experience-list">
+            <details>
+              <summary>
+                <span>
+                  <strong>WhisperBoard</strong>
+                  <small>On-device voice transcription</small>
+                </span>
+                <span className="experience-meta">
+                  iOS · Independent product
+                </span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  I tested WhisperBoard, an iPhone and iPad app that uses
+                  on-device Whisper models to turn voice recordings and audio
+                  into text. The work covered the complete user journey:
+                  recording, transcription, model selection, file handling,
+                  settings and everyday usability.
+                </p>
+                <a
+                  href="https://apps.apple.com/us/app/whisperboard-voice-to-text/id1661442906"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View WhisperBoard on the App Store ↗
+                </a>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>
+                  <strong>Access Softek</strong>
+                  <small>Digital banking products</small>
+                </span>
+                <span className="experience-meta">Web · Mobile · API</span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  As a QA Lead, I worked across customer-facing and internal
+                  banking products, established practical QA processes and built
+                  test coverage for complex user and business workflows. This
+                  work helped shorten the release cycle from six weeks to three.
+                </p>
+                <ul className="product-list" aria-label="Products tested">
+                  <li>Online Account Opening (OAO)</li>
+                  <li>Lending</li>
+                  <li>Admin Tool</li>
+                  <li>Solutions</li>
+                  <li>Delivered</li>
+                </ul>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>
+                  <strong>PLS Logistics Services</strong>
+                  <small>Logistics management platform</small>
+                </span>
+                <span className="experience-meta">
+                  Web · End-to-end workflows
+                </span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  I tested core workflows for a technology-enabled logistics
+                  platform. My work included test design, functional, smoke,
+                  exploratory, UAT and system testing, clear bug reporting and
+                  close collaboration with the product and development teams.
+                </p>
+                <a
+                  href="https://www.plslogistics.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Visit PLS Logistics Services ↗
+                </a>
+              </div>
+            </details>
+
+            <details>
+              <summary>
+                <span>
+                  <strong>Elephant Head Software</strong>
+                  <small>Enterprise client products</small>
+                </span>
+                <span className="experience-meta">Web · Mobile · Desktop</span>
+              </summary>
+              <div className="experience-body">
+                <p>
+                  I worked on client projects including products for Verizon and
+                  Pearson, combining hands-on cross-platform testing with team
+                  leadership. I built QA practices from the ground up, led a
+                  team of five and translated complex requirements into clear
+                  test coverage and bug reports.
+                </p>
+              </div>
+            </details>
           </div>
         </section>
 
