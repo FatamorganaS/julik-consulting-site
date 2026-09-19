@@ -451,9 +451,9 @@ h3 {
   font-size: 13px;
 }
 
-.field [data-slot='input'],
-.field [data-slot='textarea'],
-.field [data-slot='native-select'] {
+.field input,
+.field textarea,
+.field select {
   width: 100%;
   min-height: 48px;
   border: 1px solid var(--input);
@@ -464,18 +464,14 @@ h3 {
   font-size: 16px;
 }
 
-.field [data-slot='native-select-wrapper'] {
-  width: 100%;
-}
-
-.field [data-slot='textarea'] {
+.field textarea {
   min-height: 160px;
   resize: vertical;
 }
 
-.field [data-slot='input']:focus-visible,
-.field [data-slot='textarea']:focus-visible,
-.field [data-slot='native-select']:focus-visible {
+.field input:focus-visible,
+.field textarea:focus-visible,
+.field select:focus-visible {
   border-color: var(--accent);
   outline: 3px solid color-mix(in srgb, var(--accent), transparent 72%);
   outline-offset: 1px;

@@ -1,14 +1,6 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from '@/components/ui/native-select';
-import { Textarea } from '@/components/ui/textarea';
 
 const sessions = [
   'QA Career Session — 60 min · €69',
@@ -50,13 +42,13 @@ export function BookingForm() {
     <form className="booking-form" onSubmit={handleSubmit}>
       <div className="form-grid">
         <div className="field">
-          <Label htmlFor="name">Name *</Label>
-          <Input id="name" name="name" autoComplete="name" required />
+          <label htmlFor="name">Name *</label>
+          <input id="name" name="name" autoComplete="name" required />
         </div>
 
         <div className="field">
-          <Label htmlFor="email">Email *</Label>
-          <Input
+          <label htmlFor="email">Email *</label>
+          <input
             id="email"
             name="email"
             type="email"
@@ -68,32 +60,32 @@ export function BookingForm() {
 
       <div className="form-grid">
         <div className="field">
-          <Label htmlFor="service">Session *</Label>
-          <NativeSelect id="service" name="service" required>
+          <label htmlFor="service">Session *</label>
+          <select id="service" name="service" required>
             {sessions.map((session) => (
-              <NativeSelectOption key={session} value={session}>
+              <option key={session} value={session}>
                 {session}
-              </NativeSelectOption>
+              </option>
             ))}
-          </NativeSelect>
+          </select>
         </div>
 
         <div className="field">
-          <Label htmlFor="language">Preferred language *</Label>
-          <NativeSelect id="language" name="language" required>
-            <NativeSelectOption value="English">English</NativeSelectOption>
-            <NativeSelectOption value="Ukrainian">Ukrainian</NativeSelectOption>
-          </NativeSelect>
+          <label htmlFor="language">Preferred language *</label>
+          <select id="language" name="language" required>
+            <option value="English">English</option>
+            <option value="Ukrainian">Ukrainian</option>
+          </select>
         </div>
       </div>
 
       <div className="field">
-        <Label htmlFor="context">What would you like help with? *</Label>
+        <label htmlFor="context">What would you like help with? *</label>
         <p className="field-help" id="context-help">
           Describe your current situation, what is worrying you and what you
           would like to achieve during the session.
         </p>
-        <Textarea
+        <textarea
           id="context"
           name="context"
           minLength={50}
@@ -105,12 +97,12 @@ export function BookingForm() {
       </div>
 
       <div className="field">
-        <Label htmlFor="link">Relevant link</Label>
+        <label htmlFor="link">Relevant link</label>
         <p className="field-help" id="link-help">
           CV, LinkedIn, portfolio, job description or project URL. Please do not
           share passwords or sensitive information.
         </p>
-        <Input
+        <input
           id="link"
           name="link"
           type="url"
@@ -128,9 +120,9 @@ export function BookingForm() {
       </label>
 
       <div className="form-submit">
-        <Button type="submit" className="submit-button">
+        <button type="submit" className="submit-button">
           Continue to booking <span aria-hidden="true">→</span>
-        </Button>
+        </button>
         <p>
           Your answers are required before a time can be confirmed. Calendar
           selection will be connected to this step.
