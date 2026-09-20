@@ -209,48 +209,93 @@ export default function Home() {
           </div>
 
           <div className="experience-group">
-            <p className="group-label">Independent project</p>
-            <article className="independent-project">
-              <div className="project-heading">
-                <div className="project-identity">
-                  <img
-                    className="app-icon"
-                    src="/logos/whisperboard.jpg"
-                    alt=""
-                    width="64"
-                    height="64"
-                  />
-                  <div>
-                    <h3>WhisperBoard</h3>
-                    <p>On-device voice transcription for iOS</p>
+            <p className="group-label">Independent projects</p>
+            <div className="independent-projects">
+              <article className="independent-project">
+                <div className="project-heading">
+                  <div className="project-identity">
+                    <img
+                      className="app-icon"
+                      src="/logos/whisperboard.jpg"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
+                    <div>
+                      <h3>WhisperBoard</h3>
+                      <p>On-device voice transcription</p>
+                    </div>
                   </div>
+                  <span>iPhone · iPad</span>
                 </div>
-                <span>iPhone · iPad</span>
-              </div>
-              <p className="project-description">
-                I tested an app that uses on-device Whisper models to turn voice
-                recordings and audio into text. The work covered the complete
-                user journey: recording, transcription, model selection, file
-                handling, settings and everyday usability.
-              </p>
-              <TestTypes
-                items={[
-                  'Functional',
-                  'Exploratory',
-                  'Regression',
-                  'Usability',
-                  'Mobile',
-                ]}
-              />
-              <a
-                className="project-link"
-                href="https://apps.apple.com/us/app/whisperboard-voice-to-text/id1661442906"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View WhisperBoard on the App Store ↗
-              </a>
-            </article>
+                <p className="project-description">
+                  I tested an app that uses on-device Whisper models to turn
+                  voice recordings and audio into text. The work covered the
+                  complete user journey: recording, transcription, model
+                  selection, file handling, settings and everyday usability.
+                </p>
+                <TestTypes
+                  items={[
+                    'Functional',
+                    'Exploratory',
+                    'Regression',
+                    'Usability',
+                    'Mobile',
+                  ]}
+                />
+                <a
+                  className="project-link"
+                  href="https://apps.apple.com/us/app/whisperboard-voice-to-text/id1661442906"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on the App Store ↗
+                </a>
+              </article>
+
+              <article className="independent-project">
+                <div className="project-heading">
+                  <div className="project-identity">
+                    <img
+                      className="app-icon"
+                      src="/logos/vibeswitch.jpg"
+                      alt=""
+                      width="64"
+                      height="64"
+                    />
+                    <div>
+                      <h3>VibeSwitch Keyboard</h3>
+                      <p>Instant AI text transformation</p>
+                    </div>
+                  </div>
+                  <span>iPhone · iPad</span>
+                </div>
+                <p className="project-description">
+                  I tested an AI keyboard that rewrites text into different
+                  tones and styles, corrects grammar and lets users create their
+                  own custom vibes. The scope included keyboard setup, text
+                  transformation, usability and the end-to-end mobile journey.
+                </p>
+                <TestTypes
+                  items={[
+                    'Functional',
+                    'Exploratory',
+                    'Regression',
+                    'Usability',
+                    'Integration',
+                    'Mobile',
+                  ]}
+                />
+                <a
+                  className="project-link"
+                  href="https://apps.apple.com/us/app/vibeswitch-keyboard/id6743019968"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on the App Store ↗
+                </a>
+              </article>
+            </div>
           </div>
 
           <div className="experience-group company-experience">

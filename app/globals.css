@@ -370,10 +370,23 @@ h3 {
   text-transform: uppercase;
 }
 
+.independent-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 .independent-project {
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   border: 1px solid var(--line);
   background: var(--soft);
+}
+
+.independent-projects .project-heading {
+  flex-direction: column;
+  gap: 8px;
 }
 
 .project-heading {
@@ -423,6 +436,11 @@ h3 {
   font-size: 14px;
   font-weight: 700;
   text-underline-offset: 4px;
+}
+
+.independent-project .project-link {
+  margin-top: auto;
+  padding-top: 22px;
 }
 
 .company-experience {
@@ -932,6 +950,10 @@ footer {
   }
 
   .two-column-products {
+    grid-template-columns: 1fr;
+  }
+
+  .independent-projects {
     grid-template-columns: 1fr;
   }
 
