@@ -8,7 +8,7 @@ const services = [
     price: '€49',
     description:
       'For junior QA engineers, career switchers and testers who feel stuck. We can discuss your current level, learning priorities and next professional step.',
-    result: 'Leave with clear priorities and a realistic action plan.',
+    result: 'We’ll decide what to focus on next and why.',
   },
   {
     title: 'QA Mock Interview',
@@ -16,7 +16,8 @@ const services = [
     price: '€59',
     description:
       'A realistic QA interview: 40 minutes of questions followed by 20 minutes of direct, practical feedback.',
-    result: 'Receive a focused list of strengths, gaps and preparation topics.',
+    result:
+      'You’ll get direct feedback on strong answers and gaps to practise.',
   },
   {
     title: 'Pair Testing Session',
@@ -24,7 +25,7 @@ const services = [
     price: '€69',
     description:
       'Bring your website, app or portfolio project. We will explore it together, identify risks and practise structured testing.',
-    result: 'Receive a short written summary of findings and recommendations.',
+    result: 'Afterwards, I’ll send a short summary of what we found.',
   },
   {
     title: 'IT English Session',
@@ -32,7 +33,8 @@ const services = [
     price: '€39',
     description:
       'Practise meetings, interviews, QA vocabulary and explaining technical ideas clearly in an international team.',
-    result: 'Build confidence with language you can use immediately at work.',
+    result:
+      'We’ll practise language you can use in your next real conversation.',
   },
   {
     title: 'English Walk & Talk',
@@ -40,17 +42,16 @@ const services = [
     price: '€45',
     description:
       'Relaxed one-to-one English conversation while walking through Amsterdam. No classroom pressure and no grammar drills.',
-    result: 'Speak more naturally and receive gentle, useful corrections.',
+    result:
+      'I’ll correct you when it helps, without interrupting every sentence.',
   },
 ];
 
 function TestTypes({ items }: { items: string[] }) {
   return (
-    <ul className="test-types" aria-label="Types of testing">
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-    </ul>
+    <p className="test-types">
+      <span>Testing:</span> {items.join(' · ')}
+    </p>
   );
 }
 
@@ -74,16 +75,16 @@ export default function Home() {
 
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
-          <p className="eyebrow">QA mentoring · IT English · Amsterdam</p>
           <h1 id="hero-title">
             Move forward in QA.
             <br />
             Speak with confidence.
           </h1>
           <p className="hero-copy">
-            I’m Yuliia — a QA Lead, mentor and English practice partner based in
-            Amsterdam. I help junior QA engineers and people in tech turn
-            uncertainty into a practical next step.
+            I’m Yuliia, a QA professional and people manager based in Amsterdam.
+            I help junior testers and people in tech work through a real
+            problem, prepare for an interview or become more confident in
+            English.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#booking">
@@ -102,14 +103,11 @@ export default function Home() {
 
         <section className="section" id="work" aria-labelledby="work-title">
           <div className="section-heading">
-            <p className="eyebrow">Work with me</p>
-            <h2 id="work-title">
-              Bring me the situation you’re trying to solve.
-            </h2>
+            <h2 id="work-title">Start with the problem you have now.</h2>
             <p>
-              Every session is practical, personal and no longer than one hour.
-              You bring the context; I bring focused attention and honest
-              feedback.
+              Tell me what feels unclear or stuck. We will spend up to one hour
+              working on your situation, with direct feedback and time for your
+              questions.
             </p>
             <p className="introductory-note">
               These are introductory prices while I develop and refine each
@@ -136,7 +134,6 @@ export default function Home() {
         </section>
 
         <section className="section" aria-labelledby="useful-title">
-          <p className="eyebrow">A good fit</p>
           <h2 id="useful-title">What I can help you with</h2>
           <ul className="plain-list useful-list">
             <li>Starting or developing a QA career.</li>
@@ -149,33 +146,29 @@ export default function Home() {
         </section>
 
         <section className="section" id="about" aria-labelledby="about-title">
-          <p className="eyebrow">About</p>
-          <h2 id="about-title">Technology, communication and people.</h2>
+          <h2 id="about-title">How I got here</h2>
           <div className="story">
             <p className="lead">
-              I’m Yuliia. Eight years ago, I moved from Odesa, Ukraine, to the
-              Netherlands. Amsterdam has been home ever since.
+              Eight years ago, I moved from Odesa, Ukraine, to the Netherlands.
+              Amsterdam has been home ever since.
             </p>
             <p>
-              Starting again in a new country taught me how much confidence
-              depends on being able to understand people, express yourself and
-              find your place in an unfamiliar environment. I built a new life
-              here while continuing to grow in an international technology
-              career.
+              I had to build a new life while continuing to grow in an
+              international technology career. That experience is one reason I
+              care about clear communication and practical support, especially
+              for people finding their place in a new country or profession.
             </p>
             <p>
-              I began with a degree in English and German Philology and later
-              moved into software testing. What looked like a change of
-              direction turned out to be a natural fit: both language and
-              quality assurance require curiosity, precision and the courage to
-              ask when something does not make sense.
+              Before QA, I studied English and German Philology. I later moved
+              into software testing and found that the two fields had more in
+              common than I expected: careful observation, clear questions and
+              the ability to explain what is not working.
             </p>
             <p>
-              Over 15+ years, I’ve tested complex products, built QA processes
-              from the ground up, led distributed teams and helped junior
-              engineers grow into confident professionals. In fintech, I helped
-              introduce practical quality processes that reduced release cycles
-              from six weeks to three.
+              During more than 15 years in QA, I’ve tested web, mobile and API
+              products, built QA processes, led distributed teams and supported
+              junior engineers. In fintech, my work helped reduce a release
+              cycle from six weeks to three.
             </p>
             <p>
               I understand both sides of QA: the hands-on detail of testing a
@@ -183,10 +176,9 @@ export default function Home() {
               better software.
             </p>
             <p>
-              My mentoring is direct, practical and supportive. I will not give
-              you a generic template. We will work with your experience, your
-              project, your interview or the conversation you need to handle in
-              English.
+              In a session, we work with what you actually have: your project,
+              interview, learning question or a conversation you need to handle
+              in English.
             </p>
           </div>
         </section>
@@ -197,19 +189,15 @@ export default function Home() {
           aria-labelledby="experience-title"
         >
           <div className="section-heading">
-            <p className="eyebrow">Selected experience</p>
-            <h2 id="experience-title">
-              Companies, products and testing scope.
-            </h2>
+            <h2 id="experience-title">Selected QA work</h2>
             <p>
-              A structured view of where I worked, which products I tested and
-              how I approached quality. These are selected examples from a much
-              wider portfolio.
+              A few of the companies and products I’ve worked with, and what I
+              actually tested.
             </p>
           </div>
 
           <div className="experience-group">
-            <p className="group-label">Independent projects</p>
+            <h3 className="group-title">Independent projects</h3>
             <div className="independent-projects">
               <article className="independent-project">
                 <div className="project-heading">
@@ -299,7 +287,7 @@ export default function Home() {
           </div>
 
           <div className="experience-group company-experience">
-            <p className="group-label">Professional experience</p>
+            <h3 className="group-title">Professional experience</h3>
 
             <details className="company" open>
               <summary>
@@ -308,7 +296,6 @@ export default function Home() {
                     <img src="/logos/access-softek.svg" alt="" />
                   </span>
                   <span className="company-name">
-                    <small>Company</small>
                     <strong>Access Softek</strong>
                   </span>
                 </span>
@@ -325,7 +312,6 @@ export default function Home() {
                 </p>
                 <div className="company-products">
                   <article className="product">
-                    <p className="product-label">Product 01</p>
                     <h4>Online Account Opening (OAO)</h4>
                     <p>
                       A digital account-opening journey with multi-step forms,
@@ -343,7 +329,6 @@ export default function Home() {
                     />
                   </article>
                   <article className="product">
-                    <p className="product-label">Product 02</p>
                     <h4>Lending</h4>
                     <p>
                       Digital lending workflows covering applications, business
@@ -361,7 +346,6 @@ export default function Home() {
                     />
                   </article>
                   <article className="product">
-                    <p className="product-label">Product 03</p>
                     <h4>Orpheus</h4>
                     <p>
                       A banking product tested across core workflows, changing
@@ -388,7 +372,6 @@ export default function Home() {
                     <img src="/logos/pls.png" alt="" />
                   </span>
                   <span className="company-name">
-                    <small>Company</small>
                     <strong>PLS Logistics Services</strong>
                   </span>
                 </span>
@@ -402,7 +385,6 @@ export default function Home() {
                 </p>
                 <div className="company-products">
                   <article className="product">
-                    <p className="product-label">Product</p>
                     <h4>Logistics management platform</h4>
                     <p>
                       End-to-end logistics workflows, business rules, data
@@ -439,7 +421,6 @@ export default function Home() {
                     <img src="/logos/elephant-head-software.png" alt="" />
                   </span>
                   <span className="company-name">
-                    <small>Company</small>
                     <strong>Elephant Head Software</strong>
                   </span>
                 </span>
@@ -454,7 +435,6 @@ export default function Home() {
                 </p>
                 <div className="company-products two-column-products">
                   <article className="product">
-                    <p className="product-label">Product 01</p>
                     <span className="product-logo product-logo-pearson">
                       <img src="/logos/pearson.png" alt="" />
                     </span>
@@ -475,7 +455,6 @@ export default function Home() {
                     />
                   </article>
                   <article className="product">
-                    <p className="product-label">Product 02</p>
                     <span
                       className="product-logo product-logo-titan"
                       aria-hidden="true"
@@ -505,8 +484,7 @@ export default function Home() {
         </section>
 
         <section className="support-section" aria-labelledby="ukraine-title">
-          <p className="eyebrow">Supporting Ukrainians in tech</p>
-          <h2 id="ukraine-title">You don’t have to rebuild alone.</h2>
+          <h2 id="ukraine-title">For Ukrainians building a career abroad</h2>
           <p>
             Having moved from Odesa to the Netherlands myself, I understand how
             much courage it takes to rebuild a professional life, communicate in
@@ -525,11 +503,9 @@ export default function Home() {
         </section>
 
         <section className="section" aria-labelledby="process-title">
-          <p className="eyebrow">How it works</p>
-          <h2 id="process-title">One focused hour. A practical next step.</h2>
+          <h2 id="process-title">What happens after you choose a session</h2>
           <ol className="process-list">
             <li>
-              <span>01</span>
               <div>
                 <h3>Choose a session</h3>
                 <p>
@@ -538,7 +514,6 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span>02</span>
               <div>
                 <h3>Share your context</h3>
                 <p>
@@ -548,7 +523,6 @@ export default function Home() {
               </div>
             </li>
             <li>
-              <span>03</span>
               <div>
                 <h3>Meet and move forward</h3>
                 <p>
@@ -566,8 +540,7 @@ export default function Home() {
           aria-labelledby="booking-title"
         >
           <div className="booking-intro">
-            <p className="eyebrow">Book a session</p>
-            <h2 id="booking-title">Tell me what’s going on.</h2>
+            <h2 id="booking-title">First, tell me what you need help with</h2>
             <p>
               You do not need a perfect explanation. A few honest sentences are
               enough. I’ll review your answer before we meet so we can spend the
@@ -578,7 +551,6 @@ export default function Home() {
         </section>
 
         <section className="section faq" aria-labelledby="faq-title">
-          <p className="eyebrow">FAQ</p>
           <h2 id="faq-title">Before you book</h2>
           <details>
             <summary>Do I need QA experience?</summary>
