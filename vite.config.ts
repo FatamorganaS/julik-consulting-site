@@ -41,6 +41,20 @@ export default defineConfig(async () => {
   process.env.WRANGLER_LOG_PATH ??= '.wrangler/logs';
   process.env.MINIFLARE_REGISTRY_PATH ??= '.wrangler/registry';
 
+  // Vercel runs the Vinext server through Nitro. Keep the existing Cloudflare
+  // configuration for local development and OpenAI Sites deployments.
+  const isVercelBuild =
+    process.env.VERCEL === '1' || process.env.NITRO_PRESET === 'vercel';
+
+  if (isVercelBuild) {
+    const { nitro } = await import('nitro/vite');
+    const { default: tailwindcssVite } = await import('@tailwindcss/vite');
+
+    return {
+      plugins: [vinext(), tailwindcssVite(), nitro()],
+    };
+  }
+
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
