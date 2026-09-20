@@ -212,9 +212,18 @@ export default function Home() {
             <p className="group-label">Independent project</p>
             <article className="independent-project">
               <div className="project-heading">
-                <div>
-                  <h3>WhisperBoard</h3>
-                  <p>On-device voice transcription for iOS</p>
+                <div className="project-identity">
+                  <img
+                    className="app-icon"
+                    src="/logos/whisperboard.jpg"
+                    alt=""
+                    width="64"
+                    height="64"
+                  />
+                  <div>
+                    <h3>WhisperBoard</h3>
+                    <p>On-device voice transcription for iOS</p>
+                  </div>
                 </div>
                 <span>iPhone · iPad</span>
               </div>
@@ -249,11 +258,18 @@ export default function Home() {
 
             <details className="company" open>
               <summary>
-                <span className="company-name">
-                  <small>Company</small>
-                  <strong>Access Softek</strong>
+                <span className="company-identity">
+                  <span className="company-logo-box">
+                    <img src="/logos/access-softek.svg" alt="" />
+                  </span>
+                  <span className="company-name">
+                    <small>Company</small>
+                    <strong>Access Softek</strong>
+                  </span>
                 </span>
-                <span className="company-role">9 years · QA Lead</span>
+                <span className="company-role">
+                  9 years · QA Engineer · QA Lead · People Manager
+                </span>
               </summary>
               <div className="company-body">
                 <p className="company-description">
@@ -322,9 +338,14 @@ export default function Home() {
 
             <details className="company">
               <summary>
-                <span className="company-name">
-                  <small>Company</small>
-                  <strong>PLS Logistics Services</strong>
+                <span className="company-identity">
+                  <span className="company-logo-box company-logo-wide">
+                    <img src="/logos/pls.png" alt="" />
+                  </span>
+                  <span className="company-name">
+                    <small>Company</small>
+                    <strong>PLS Logistics Services</strong>
+                  </span>
                 </span>
                 <span className="company-role">QA Engineer</span>
               </summary>
@@ -368,11 +389,16 @@ export default function Home() {
 
             <details className="company">
               <summary>
-                <span className="company-name">
-                  <small>Company</small>
-                  <strong>Elephant Head Software</strong>
+                <span className="company-identity">
+                  <span className="company-logo-box company-logo-wide">
+                    <img src="/logos/elephant-head-software.png" alt="" />
+                  </span>
+                  <span className="company-name">
+                    <small>Company</small>
+                    <strong>Elephant Head Software</strong>
+                  </span>
                 </span>
-                <span className="company-role">QA Engineer · Team Lead</span>
+                <span className="company-role">QA Engineer · Manager</span>
               </summary>
               <div className="company-body">
                 <p className="company-description">
@@ -384,6 +410,9 @@ export default function Home() {
                 <div className="company-products two-column-products">
                   <article className="product">
                     <p className="product-label">Product 01</p>
+                    <span className="product-logo product-logo-pearson">
+                      <img src="/logos/pearson.png" alt="" />
+                    </span>
                     <h4>Pearson</h4>
                     <p>
                       Digital product workflows tested across browsers, releases
@@ -402,6 +431,12 @@ export default function Home() {
                   </article>
                   <article className="product">
                     <p className="product-label">Product 02</p>
+                    <span
+                      className="product-logo product-logo-titan"
+                      aria-hidden="true"
+                    >
+                      <img src="/logos/ehs-clients.jpg" alt="" />
+                    </span>
                     <h4>Titan</h4>
                     <p>
                       Core product functionality, end-to-end user flows and

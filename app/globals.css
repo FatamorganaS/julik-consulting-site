@@ -383,6 +383,18 @@ h3 {
   gap: 24px;
 }
 
+.project-identity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.app-icon {
+  flex: 0 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink), transparent 88%);
+}
+
 .project-heading h3 {
   margin-bottom: 3px;
 }
@@ -461,6 +473,37 @@ h3 {
   gap: 2px;
 }
 
+.company-identity {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 14px;
+}
+
+.company-logo-box {
+  display: grid;
+  flex: 0 0 auto;
+  width: 58px;
+  height: 48px;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  place-items: center;
+}
+
+.company-logo-box.company-logo-wide {
+  width: 76px;
+}
+
+.company-logo-box img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .company-name small,
 .product-label {
   color: var(--accent);
@@ -476,10 +519,12 @@ h3 {
 }
 
 .company-role {
+  max-width: 290px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 700;
-  white-space: nowrap;
+  line-height: 1.4;
+  text-align: right;
 }
 
 .company-body {
@@ -509,6 +554,40 @@ h3 {
 
 .product-label {
   margin-bottom: 8px;
+}
+
+.product-logo {
+  display: grid;
+  width: 118px;
+  height: 52px;
+  margin: 0 0 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #fff;
+  place-items: center;
+}
+
+.product-logo-pearson img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-logo-titan {
+  position: relative;
+  width: 130px;
+  height: 70px;
+}
+
+.product-logo-titan img {
+  position: absolute;
+  top: -355px;
+  left: -735px;
+  width: 1170px;
+  max-width: none;
+  height: 440px;
 }
 
 .product h4 {
@@ -831,6 +910,10 @@ footer {
     gap: 8px;
   }
 
+  .project-identity {
+    align-items: flex-start;
+  }
+
   .company > summary {
     grid-template-columns: minmax(0, 1fr) 22px;
     gap: 14px;
@@ -839,6 +922,8 @@ footer {
   .company-role {
     grid-column: 1;
     grid-row: 2;
+    max-width: none;
+    text-align: left;
   }
 
   .company > summary::after {
